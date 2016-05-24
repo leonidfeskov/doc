@@ -340,7 +340,7 @@ console.log('Здесь javascript для блока news')
 ```
 подключите `news.js` в `source/foundation/main.js`
 ```javascript
-require('./mainmenu.js');
+require('./news.js');
 ```
 ## Подключение нового js-плагина
 ...
