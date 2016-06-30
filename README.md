@@ -99,7 +99,8 @@ base/
 extends _layout.jade
 block content
     +btn('Подключить') // подключение блока с помощью миксина
-	include ../blocks/base/btn/btn.jade // подключение блока с помощью include
+    // или
+    include ../blocks/base/btn/btn.jade // подключение блока с помощью include
 ```
 
 ### Структура каталога htdocs:
@@ -164,6 +165,12 @@ htdocs/
 Пример: `menu__item_active`  
 **Модификатор типа «ключ — значение»**. Значение модификатора отделяется от имени одним подчеркиванием (\_). Полное имя создается по схеме: **block-name__elem-name_mod-name_mod-val**.  
 Пример: `menu__item_type_radio`
+
+Упрощение: Допускается использование булевых модификаторов с префиксом `is-`, например `is-active`, `is-opened` и т.п. В CSS использовать так:
+```css
+.tab__item {...}
+.tab__item.is-active {...}
+```
 
 ## Пример использования
 Реализация блока «Новость» в HTML и CSS:  
